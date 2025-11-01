@@ -1,0 +1,147 @@
+/* การรีเซ็ตเบื้องต้น */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.gradient-background {
+    position: fixed; /* ตรึงให้อยู่กับที่ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* ส่งไปอยู่ด้านหลังสุด */
+    background: linear-gradient(
+        45deg,
+        #f33939 0%,    /* 1. แดงอ่อน */
+        #ff693f 25%,   /* 2. ส้มอ่อน */
+        #b3ff86 50%,   /* 3. เขียวอ่อน */
+        #f56fff 75%,   /* 4. ฟ้าอ่อน */
+        #5681f7 100%   /* 5. น้ำเงินอมม่วง */
+    );
+    background-size: 400% 400%; /* ทำให้ gradient ใหญ่ขึ้นเพื่อการเคลื่อนไหวที่ราบรื่น */
+    animation: gradientAnimation 15s ease infinite; /* เพิ่มอนิเมชั่น */
+}
+
+.color-text {
+    background-image: linear-gradient(
+        45deg,
+        #f33939 0%,    /* 1. แดงอ่อน */
+        #ff693f 25%,   /* 2. ส้มอ่อน */
+        #65ff81 50%,   /* 3. เขียวอ่อน */
+        #f56fff 75%,   /* 4. ฟ้าอ่อน */
+        #5681f7 100%   /* 5. น้ำเงินอมม่วง */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    background-color: rgb(41, 55, 78); /* พื้นหลังใส */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ตรึง Navbar ไว้ด้านบน */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100; /* ให้อยู่ด้านบนสุด */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* <-- จาก row เป็น column */
+    gap: 20px; /* เพิ่มระยะห่างระหว่างภาพกับข้อความ */
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 100px 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+img {
+    border-radius: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.802);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 1080px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-device {
+    background: rgba(255, 255, 255, 0.802);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-member {
+    font-size: 24;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 รูปต่อแถว */
+    gap: 20px;
+    justify-items: center;
+}
+
+.container-devices {
+    font-size: 24;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 รูปต่อแถว */
+    gap: 20px;
+    justify-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(41, 55, 78);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

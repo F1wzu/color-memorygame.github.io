@@ -1,78 +1,59 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Color Memory Game — Project</title>
-  <style>
-    :root{--bg:#0f1724;--card:#071028;--accent:#06b6d4;--muted:#98a6b8}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#071026,#07162a);color:#e6eef8;display:flex;align-items:center;justify-content:center;height:100vh}
-    .card{width:min(720px,92%);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    h1{margin:0 0 8px;font-size:20px}
-    p.lead{margin:0 0 18px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:start}
-    .preview{height:240px;border-radius:10px;background:#021124;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
-    .meta{display:flex;flex-direction:column;gap:10px}
-    .meta .row{display:flex;gap:8px}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021124;border:none}
-    .info{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;color:var(--muted);font-size:14px}
-    .small{font-size:13px;color:var(--muted)}
-    @media (max-width:640px){.grid{grid-template-columns:1fr} .preview{height:180px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR MEMORY</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>Color Memory Game</h1>
-    <p class="lead">Arduino project — 5 LEDs, 5 buttons, I2C LCD. Memory / Simon-says style game with highscore and buzzer sounds.</p>
-
-    <section class="grid">
-      <div class="preview" id="preview">Screenshot / Wiring Diagram</div>
-
-      <div class="meta">
-        <div class="row">
-          <button class="btn primary" id="downloadCode">Download Code</button>
-          <a class="btn" id="viewRepo" href="#" target="_blank">View Repository</a>
+    <div class="gradient-background"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1 class="color-text">COLOR MEMORY GAME</h1>
+            </div>
+        </nav>
         </div>
-
-        <div class="info">
-          <strong>Features</strong>
-          <ul style="margin:8px 0 0 18px">
-            <li>5 buttons & 5 LEDs</li>
-            <li>I2C LCD status display</li>
-            <li>High score saved (EEPROM optional)</li>
-            <li>FF VII victory tune (buzzer)</li>
-            <li>Non-blocking LED pattern while waiting</li>
-          </ul>
+    </header>
+    <div class="content">
+        <div class="card"><h1 class="color-text">COLOR MEMORY GAME</h1><img src="img/color-memorize.png" alt="main-project" width="720" height="480"></div>
+            <div class="card">
+                <h2>บทคัดย่อ</h2>
+                    <p>
+                    “Color Memory Game” เป็นโครงงานการสร้างเกมด้วยไมโครคอนโทรลเลอร์ (Microcontroller) ซึ่งเป็นส่วนหนึ่งของรายวิชา “การประมวลผลทางกายภาพ (Physical Computing)” 
+                    โดยมีวัตถุประสงค์เพื่อพัฒนาทักษะและประยุกต์ใช้ความรู้ที่ได้รับจากรายวิชานี้โดยการสร้างผลงานจริง เกมดังกล่าวออกแบบมาเพื่อสร้างความบันเทิงและท้าทายความจำของผู้เล่น 
+                    มีการไต่ระดับความยากเพื่อเพิ่มอรรถรสในการเล่น รวมถึงการแสดงผลต่าง ๆ ผ่านจอ LCD (Liquid Crystal Display) 
+                    เพื่อระบุช่วงการจำ (Memorize) ช่วงการเล่น ระดับความยากง่าย (Level) คะแนนของปัจจุบัน และคะแนนสูงสุด (High Score) โครงงานนนี้จึงเป็นสื่อการเรียนรู้ที่ช่วยเสริมทักษะทางด้านการเขียนโปรแกรมและการประมวลผลทางกายภาพได้อย่างมีประสิทธิภาพ
+                    </p>
+            </div>
+            <div class="card">
+                <h2>อุปกรณ์</h2>
+                    <div class="container-devices">
+                        <div class="card-device"><img src="img/arduino.png" width="250" height="200"><h3>Arduino R4 Wifi</h3></div>
+                        <div class="card-device"><img src="img/switch.png" width="200" height="200"><h3>Switch Button</h3></div>
+                        <div class="card-device"><img src="img/led.png" width="300" height="200"><h3>LED</h3></div>
+                        <div class="card-device"><img src="img/lcd.png" width="300" height="200"><h3>LCD 16 x 2</h3></div>
+                        <div class="card-device"><img src="img/buzzer.png" width="200" height="200"><h3>Buzzer Passive</h3></div>
+                    </div>
+            </div>
+            <div class="card">
+                <h2>Video</h2>
+            </div>
+            <div class="card">
+                <h2>Source Code</h2><a href="https://github.com/F1wzu/Physical-Computing-Project-2025---IT-KMITL/blob/main/Color_Memorize_Final/Color_Memorize_Final.ino"><img src="img/srccode.png" alt="code"></a>
+            </div>
+            <div class="card">
+                <h2>Member</h2>
+                <div class="container-member">
+                    <div><img src="img/Nikki.jpg" alt="kornrawee" width="300" height="400"><h3>นางสาว กรรวี โนเวล 67070202</h3></div>
+                    <div><img src="img/Fiw.jpg" alt="chitsanupong" width="300" height="400"><h3>นาย ชิษณุพงศ์ ธนาภูมิพสิษฐ์ 67070221</h3></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-
-        <div class="info small">
-          <strong>Wiring (summary)</strong>
-          <div style="margin-top:8px">LEDs: pins 2–6 | Buttons: pins 8–12 (INPUT_PULLUP) | Buzzer: pin 7 | LCD: I2C (0x27)</div>
-        </div>
-
-        <div class="info small">
-          <strong>How to run!!!</strong>
-          <ol style="margin:8px 0 0 18px">
-            <li>Connect components as wiring above.</li>
-            <li>Upload the Arduino sketch (provided in Download).</li>
-            <li>Press the first button to start. Enjoy!</li>
-          </ol>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <script>
-    document.getElementById('downloadCode').addEventListener('click', ()=>{
-      // create a small example sketch file for download
-      const code = `// Color Memory Game - example (trimmed)\n// Paste full sketch into Arduino IDE\nvoid setup(){ }\nvoid loop(){ }`;
-      const blob = new Blob([code], {type: 'text/plain'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'color_memory_game.ino'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-    });
-  </script>
+    <footer>
+        <h3 class="color-text">IT KMITL - Physical Computing</h3>
+    </footer>
 </body>
 </html>
