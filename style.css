@@ -13,22 +13,22 @@ body {
 }
 
 .gradient-background {
-    position: fixed; /* ตรึงให้อยู่กับที่ */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* ส่งไปอยู่ด้านหลังสุด */
+    z-index: -1;
     background: linear-gradient(
         45deg,
-        #f33939 0%,    /* 1. แดงอ่อน */
-        #ff693f 25%,   /* 2. ส้มอ่อน */
-        #b3ff86 50%,   /* 3. เขียวอ่อน */
-        #f56fff 75%,   /* 4. ฟ้าอ่อน */
-        #5681f7 100%   /* 5. น้ำเงินอมม่วง */
+        #f33939 0%,
+        #ff693f 25%,
+        #b3ff86 50%,
+        #f56fff 75%,
+        #5681f7 100%
     );
-    background-size: 400% 400%; /* ทำให้ gradient ใหญ่ขึ้นเพื่อการเคลื่อนไหวที่ราบรื่น */
-    animation: gradientAnimation 15s ease infinite; /* เพิ่มอนิเมชั่น */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 .text-background {
@@ -50,11 +50,11 @@ iframe {
 .color-text {
     background-image: linear-gradient(
         45deg,
-        #f33939 0%,    /* 1. แดงอ่อน */
-        #ff693f 25%,   /* 2. ส้มอ่อน */
-        #65ff81 50%,   /* 3. เขียวอ่อน */
-        #f56fff 75%,   /* 4. ฟ้าอ่อน */
-        #5681f7 100%   /* 5. น้ำเงินอมม่วง */
+        #f33939 0%,
+        #ff693f 25%,
+        #65ff81 50%,
+        #f56fff 75%,
+        #5681f7 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,16 +69,16 @@ iframe {
 }
 
 .navbar {
-    background-color: rgba(41, 55, 78, 1); /* พื้นหลังใส */
+    background-color: rgba(41, 55, 78, 1);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* ตรึง Navbar ไว้ด้านบน */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100; /* ให้อยู่ด้านบนสุด */
+    z-index: 100;
 }
 
 .logo a {
@@ -91,8 +91,8 @@ iframe {
 .content {
     display: flex;
     justify-content: center;
-    flex-direction: column; /* <-- จาก row เป็น column */
-    gap: 20px; /* เพิ่มระยะห่างระหว่างภาพกับข้อความ */
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     flex-grow: 1;
     width: 100%;
@@ -145,7 +145,7 @@ img {
     font-size: 24;
     padding-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 รูปต่อแถว */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
 }
